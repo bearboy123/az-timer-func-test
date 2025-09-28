@@ -15,8 +15,8 @@ public class MyTimerTrigger
         _logger = logger;
     }
 
-    [Function("MyTimerTrigger")] // triggered every 10 seconds
-    public Task Run([TimerTrigger("*/10 * * * * *")] TimerInfo myTimer, CancellationToken cancellationToken)
+    [Function("MyTimerTrigger")] // triggered every 15 seconds
+    public Task Run([TimerTrigger("*/15 * * * * *")] TimerInfo myTimer, CancellationToken cancellationToken)
     {
         _logger.LogInformation("C# Timer trigger function executed at: {executionTime}", DateTime.UtcNow);
 
